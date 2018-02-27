@@ -1,3 +1,3 @@
-package Enums;
+package enums;
 
-public enum Gender {MALE, FEMALE};
+public enum Gender {MALE, FEMALE,UNISEX};

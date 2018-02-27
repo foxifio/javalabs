@@ -1,3 +1,3 @@
-package Enums;
+package enums;
 
-public enum SportType {BASKETBALL, FOOTBALL, VALLEYBALL}
+public enum SportType {BASKETBALL,FOOTBALL,RUNNING}

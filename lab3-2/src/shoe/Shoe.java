@@ -26,8 +26,8 @@ public class Shoe {
 
     @Override
     public String toString() {
-        return "Shoe{" +
-                "type=" + type +
+        return "Shoe{" +"name=" + name +
+                ",type=" + type +
                 ", brand=" + brand +
                 ", size=" + size +
                 ", color='" + color + '\'' +

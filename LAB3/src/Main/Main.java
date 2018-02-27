@@ -1,55 +1,44 @@
-package Main;
-import CS.ShoesShopManager;
-import Enums.*;
-import SHoe.Shoe;
-import ShoesTypes.Desert;
-import ShoesTypes.Loafer;
-import ShoesTypes.Sneaker;
+package main;
 
-import java.util.LinkedList;
+import customer.Customer;
+import enums.*;
+import shoe.Shoe;
+import shoe.ShoeShopManager;
+import shoeTypes.*;
+
 import java.util.List;
 
-import static Enums.Type.SPORT;
-
 public class Main {
-    public static void PrintList(List<Shoe> List){
+    public static void PrintList(List<Shoe> List) {
         List.forEach((Shoe x) -> {
-         System.out.println(x.toString());
+            System.out.println(x.toString());
         });
     }
+
     public static void main(String[] args) {
-        ShoesShopManager shoesShopManager = new ShoesShopManager("ShoesDream", "S.Petlyru 4", 1820);
-        shoesShopManager.addShoe(new Loafer(Brand.GUCCI, "MARK I", 1, 1150, "White",
-                Size.INT_39, Type.DEMI, Gender.MALE, "Leather", "Western", "plastic"));
-        shoesShopManager.addShoe(new Loafer(Brand.GUCCI, "MARK II", 2, 1200, "White/Black",
-                Size.INT_40, Type.DEMI, Gender.MALE, "Leather", "Glory", "rubber"));
-        shoesShopManager.addShoe(new Loafer(Brand.GUCCI, "MARK", 4, 1000, "White/Black",
-                Size.INT_41, Type.DEMI, Gender.MALE, "Leather", "Champion", "rubber"));
-        shoesShopManager.addShoe(new Sneaker(Brand.ADIDAS, "ZTX-911", 2, 1550, "Blue/White/Black",
-                Size.INT_41, Type.SPORT, Gender.MALE, "syntetic leather", SportType.BASKETBALL, "syntetic"));
-        shoesShopManager.addShoe(new Sneaker(Brand.ADIDAS, "ZTX-911", 1, 1550, "Blue/White/Black",
-                Size.INT_40, Type.SPORT, Gender.MALE, "syntetic leather", SportType.BASKETBALL, "syntetic"));
-        shoesShopManager.addShoe(new Sneaker(Brand.ADIDAS, "ZTX-911", 3, 1550, "Yellow",
-                Size.INT_38, Type.SPORT, Gender.FEMALE, "syntetic leather", SportType.BASKETBALL, "syntetic"));
-        shoesShopManager.addShoe(new Sneaker(Brand.PEAK, "ICQ-560", 5, 1130, "Blue",
-                Size.INT_40, Type.SPORT, Gender.MALE, "syntetic", SportType.VALLEYBALL, "syntetic"));
-        shoesShopManager.addShoe(new Sneaker(Brand.CHAMPION, "GR-500", 2, 1550, "Purple",
-                Size.INT_42, Type.SPORT, Gender.MALE, "syntetic leather", SportType.FOOTBALL, "syntetic"));
-        shoesShopManager.addShoe(new Desert(Brand.ORACLE, "Viper", 2, 2500, "Browm",
-                Size.INT_43, Type.DEMI, Gender.MALE, 15, "syntetic leather", "rubber"));
-        shoesShopManager.addShoe(new Desert(Brand.ORACLE, "Viper", 2, 2500, "Black",
-                Size.INT_42, Type.DEMI, Gender.MALE, 15, "syntetic leather", "rubber"));
-       // System.out.println(shoesShopManager.toString());
-        PrintList(shoesShopManager.getShoes());
+        Customer Jaden = new Customer("Jaden", "Smith", Gender.MALE, Size.INT_40, 236786.5);
+        ShoeShopManager shoeShopManager = new ShoeShopManager("SoleStore", "George st 4,California,USA", 3456);
 
-        List<Shoe> availableShoes = shoesShopManager.findByType(Type.SPORT);
-        for (Shoe shoe: availableShoes){
-            System.out.println(shoe);
+        shoeShopManager.addShoe(new Sneakers("ZTX90", Type.SPORT, Brand.ADIDAS, Size.INT_40, "White with black dots",
+                1220, "syntetic leather", SportType.BASKETBALL, "Rubber", "Plastic"));
+        shoeShopManager.addShoe(new Sneakers("DAME", Type.SPORT, Brand.PUMA, Size.INT_41, "Red",
+                1000, "syntetic leather", SportType.RUNNING, "Rubber", "syntetic"));
+        shoeShopManager.addShoe(new Sneakers("RONALDO", Type.SPORT, Brand.ADIDAS, Size.INT_40, "Black and gold stripes",
+                1560, "syntetic leather", SportType.FOOTBALL, "Rubber", "Plastic"));
+        shoeShopManager.addShoe(new Loafers("Mark II", Type.SUMMER, Brand.GUCCI, Size.INT_40, "Brown",
+                5000, "Leather", "Leather", "Rubber"));
+        shoeShopManager.addShoe(new Loafers("Mark I", Type.SUMMER, Brand.GUCCI, Size.INT_42, "Black",
+                4500, "Leather", "Leather", "Rubber"));
+        shoeShopManager.addShoe(new RubberBoots("Duck", Type.DEMI, Brand.DUNLOP, Size.INT_39, "Green", 700, "Rubber", "Plastic"));
+        shoeShopManager.addShoe(new FlipFlops("Sun", Type.SUMMER, Brand.PEAK, Size.INT_40, "Yellow", 400, "Rubber", "Rubber"));
+        shoeShopManager.addShoe(new SnowBoots("Wolf", Type.WINTER, Brand.TIMBERLAND, Size.INT_40, "Grey", 4500, "Leather", 20));
+        shoeShopManager.addShoe(new Desert("Sheriff",Type.DEMI,Brand.GUCCI,Size.INT_40,"Black",3000,"Leather","Rubber"));
+        shoeShopManager.addShoe(new HikingBoots("DOT",Type.SPORT,Brand.TIMBERLAND,Size.INT_40,"Grey",3500,"Plastic","Metal"));
+        PrintList(shoeShopManager.getShoes());
+        System.out.println("Shoes for" + Jaden.getName() + "sorted by brand:");
 
-        }
-
-
-    }
-
-
+        List<Shoe> shoes = shoeShopManager.findByType(Type.SPORT);
+        shoeShopManager.sortByBrand(shoes);
+        shoes.forEach(shoe -> System.out.println(shoe));
+       }
     }

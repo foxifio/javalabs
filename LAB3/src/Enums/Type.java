@@ -1,3 +1,3 @@
-package Enums;
+package enums;
 
-public enum Type {SPORT, WINTER, SUMMER, DEMI}
+public enum Type {SPORT, WINTER, SUMMER, DEMI};

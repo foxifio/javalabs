@@ -37,13 +37,8 @@ public class Main {
         PrintList(shoeShopManager.getShoes());
         System.out.println("Shoes for" + Jaden.getName() + "sorted by brand:");
 
-
-
-      //if(Jaden.getSize()==shoe.getSize()) {
         List<Shoe> shoes = shoeShopManager.findByType(Type.SPORT);
         shoeShopManager.sortByBrand(shoes);
-        for (Shoe shoe : shoes) {
-            System.out.println(shoe);
-        }
+        shoes.forEach(shoe -> System.out.println(shoe));
        }
     }

@@ -1,54 +1,38 @@
-package SHoe;
+package shoe;
 
-import Enums.Brand;
-import Enums.Size;
-import Enums.Type;
-import Enums.Gender;
+import enums.Brand;
+import enums.Size;
+import enums.Type;
 
-public abstract class Shoe {
-    private Brand brand;
+public class Shoe {
     private String name;
-    private int amount;
-    private double price;
-    private String color;
-    private Size size;
     private Type type;
-    private Gender gender;
+    private Brand brand;
+    private Size size;
+    private String color;
+    private double price;
+    private String material;
 
-    //public abstract Enums.Type getShoesType();
-    //public abstract Enums.Size getShoesSize();
 
-    public Shoe(Brand brand, String name, int amount, double price, String color, Size size, Type type, Gender gender) {
-        this.brand = brand;
+    public Shoe(String name, Type type, Brand brand, Size size, String color, double price, String material) {
         this.name = name;
-        this.amount = amount;
-        this.price = price;
-        this.color = color;
-        this.size = size;
         this.type = type;
-        this.gender = gender;
+        this.brand = brand;
+        this.size = size;
+        this.color = color;
+        this.price = price;
+        this.material = material;
     }
 
     @Override
     public String toString() {
-        return "Shoe{" +
-                "brand=" + brand +
-                ", name='" + name + '\'' +
-                ", amount=" + amount +
-                ", price=" + price +
-                ", color='" + color + '\'' +
+        return "Shoe{" +"name=" + name +
+                ",type=" + type +
+                ", brand=" + brand +
                 ", size=" + size +
-                ", type=" + type +
-                ", gender=" + gender +
+                ", color='" + color + '\'' +
+                ", price=" + price +
                 '}';
-    }
-
-    public Brand getBrand() {
-        return brand;
-    }
-
-    public void setBrand(Brand brand) {
-        this.brand = brand;
     }
 
     public String getName() {
@@ -59,36 +43,12 @@ public abstract class Shoe {
         this.name = name;
     }
 
-    public int getAmount() {
-        return amount;
+    public String getMaterial() {
+        return material;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public Size getSize() {
-        return size;
-    }
-
-    public void setSize(Size size) {
-        this.size = size;
+    public void setMaterial(String material) {
+        this.material = material;
     }
 
     public Type getType() {
@@ -99,12 +59,35 @@ public abstract class Shoe {
         this.type = type;
     }
 
-    public Gender getGender() {
-        return gender;
+    public Brand getBrand() {
+        return brand;
     }
 
-    public void setGender(Gender gender) {
-        this.gender = gender;
+    public void setBrand(Brand brand) {
+        this.brand = brand;
     }
-    public abstract Type getSType();
+
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
