@@ -1,19 +1,17 @@
-package main;
+package ua.lviv.iot.lab3;
 
-import customer.Customer;
-import enums.*;
-import shoe.Shoe;
-import shoe.ShoeShopManager;
-import shoeTypes.*;
+import ua.lviv.iot.lab3.Customer;
+import ua.lviv.iot.lab3.Shoe;
+import ua.lviv.iot.lab3.ShoeShopManager;
 
 import java.util.List;
 
 public class Main {
     public static void PrintList(List<Shoe> List) {
         List.forEach((Shoe x) -> {
-            System.out.println(x.toString());
-        });
-    }
+        System.out.println( x.toString() );
+    });
+}
 
     public static void main(String[] args) {
         Customer Jaden = new Customer("Jaden", "Smith", Gender.MALE, Size.INT_40, 236786.5);

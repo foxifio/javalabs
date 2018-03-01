@@ -3,11 +3,8 @@ package text;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,15 +14,9 @@ public class StringProcessor {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter String" + "\n");
         return br.readLine();
-
     }
     private ArrayList<String> fragments = new ArrayList<>();
-
-    public ArrayList<String> getFragments() {
-        return fragments;
-    }
-
-    public ArrayList<String> readFragments() throws IOException {
+       public ArrayList<String> readFragments() throws IOException {
         System.out.print("Enter amount of fragments:" + "\n");
         Scanner scan = new Scanner(System.in);
         int number = scan.nextInt();

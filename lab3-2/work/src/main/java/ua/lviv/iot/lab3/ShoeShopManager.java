@@ -1,6 +1,6 @@
-package shoe;
+package ua.lviv.iot.lab3;
 
-import enums.Type;
+import ua.lviv.iot.lab3.Type;
 
 import java.util.Comparator;
 import java.util.LinkedList;

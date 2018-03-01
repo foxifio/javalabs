@@ -1,10 +1,10 @@
-package shoeTypes;
+package ua.lviv.iot.lab3;
 
-import enums.Brand;
-import enums.Size;
-import enums.SportType;
-import enums.Type;
-import shoe.Shoe;
+import ua.lviv.iot.lab3.Brand;
+import ua.lviv.iot.lab3.Size;
+import ua.lviv.iot.lab3.SportType;
+import ua.lviv.iot.lab3.Type;
+import ua.lviv.iot.lab3.Shoe;
 
 public class Sneakers extends Shoe {
     private SportType sportType;

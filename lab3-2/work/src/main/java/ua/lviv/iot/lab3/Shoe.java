@@ -1,8 +1,8 @@
-package shoe;
+package ua.lviv.iot.lab3;
 
-import enums.Brand;
-import enums.Size;
-import enums.Type;
+import ua.lviv.iot.lab3.Brand;
+import ua.lviv.iot.lab3.Size;
+import ua.lviv.iot.lab3.Type;
 
 public class Shoe {
     private String name;

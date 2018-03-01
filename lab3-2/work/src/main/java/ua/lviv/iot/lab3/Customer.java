@@ -1,7 +1,4 @@
-package customer;
-
-import enums.Gender;
-import enums.Size;
+package ua.lviv.iot.lab3;
 
 public class Customer {
     private String name;
