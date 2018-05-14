@@ -1,20 +1,19 @@
-
 public class Main {
 
 	public static void main(String[] args) {
-		Hotel George = new Hotel();
-		Hotel Plaza = new Hotel("Plaza", "Kyiv", 200, 250);
-		Hotel Knyaziy_Dvir = new Hotel("Knyaziy Dvir", "Sokilnyky", 100, 50, 400);
+		Hotel george = new Hotel();
+		Hotel plaza = new Hotel("Plaza", "Kyiv", 200, 250);
+		Hotel knyaziyDvir = new Hotel("Knyaziy Dvir", "Sokilnyky", 100, 50, 400);
 		
-		System.out.println(George.toString());
-		System.out.println(Plaza.toString());
-		System.out.println(Knyaziy_Dvir.toString());
+		System.out.println(george.toString());
+		System.out.println(plaza.toString());
+		System.out.println(knyaziyDvir.toString());
 		
 		Hotel.printStaticSum();
 		
-		George.printSum();
-		Plaza.printSum();
-		Knyaziy_Dvir.printSum();
+		george.printSum();
+		plaza.printSum();
+		knyaziyDvir.printSum();
 	}
 
 }

@@ -1,76 +1,75 @@
-
 public class Hotel {
-private String Name;
-private String Location;
-private int StuffNumber;
-private int RoomsNumber;
-private int RoomPrice;
+private String name;
+private String location;
+private int stuffNumber;
+private int roomsNumber;
+private int roomPrice;
     
-	public static int GeneralStuffNumber = 0;
+	public static int generalStuffNumber = 0;
 	
     public String getName() {
-		return Name;
+		return name;
 	}
 	
-    public void setName(String Name) {
-		this.Name = Name;
+    public void setName(String name) {
+		this.name = name;
 	}
 	
 	public String getLocation() {
-		return Location;
+		return location;
 	}
 
-    public void setLocation(String Location) {
-		this.Location = Location;
+    public void setLocation(String location) {
+		this.location = location;
 	}
 	
     public int getStuffNumber() {
- 		return StuffNumber;
+ 		return stuffNumber;
 	}
 	
-    public void setStuffNumber(int StuffNumber) {
-		GeneralStuffNumber = GeneralStuffNumber - this.StuffNumber + StuffNumber;
-		this.StuffNumber = StuffNumber;
+    public void setStuffNumber(int stuffNumber) {
+		generalStuffNumber = generalStuffNumber - this.stuffNumber + stuffNumber;
+		this.stuffNumber = stuffNumber;
 	}
 	
 	public int getRoomsNumber() {
-		return RoomsNumber;
+		return roomsNumber;
 	}
 	
-    public void setRoomsNumber(int RoomsNumber) {
-		this.RoomsNumber = RoomsNumber;
+    public void setRoomsNumber(int roomsNumber) {
+		this.roomsNumber = roomsNumber;
 	}
 	
     public int getRoomPrice() {
-		return RoomPrice;
+		return roomPrice;
 	}
 	
-    public void setRoomPrice(int RoomPrice) {
-		this.RoomPrice = RoomPrice;
+    public void setRoomPrice(int roomPrice) {
+		this.roomPrice = roomPrice;
 	}
 	
     public Hotel() {
-		Name = "Geroge";
-		Location = "Lviv";
-		StuffNumber = 150;
-		RoomsNumber = 100;
-		RoomPrice = 450;
+		name = "Geroge";
+		location = "Lviv";
+		stuffNumber = 150;
+		roomsNumber = 100;
+		roomPrice = 450;
     }
 	
-    public Hotel (String Name, String Location, int StuffNumber, int RoomsNumber) {
-		setName(Name);
-		setLocation(Location);
-		setStuffNumber(StuffNumber);
-		setRoomsNumber(RoomsNumber);
-		RoomPrice = 400;
+    public Hotel (String name, String location, int stuffNumber, int roomsNumber) {
+		setName(name);
+		setLocation(location);
+		setstuffNumber(stuffNumber);
+		setroomsNumber(roomsNumber);
+		roomPrice = 400;
     }
 	
-    public Hotel (String Name, String Location, int StuffNumber, int RoomsNumber, int RoomPrice) {
-		setName(Name);
-		setLocation(Location);
-		setStuffNumber(StuffNumber);
-		setRoomsNumber(RoomsNumber);
-		setRoomPrice(RoomPrice);
+    public Hotel (String name, String location, int stuffNumber, int roomsNumber, int roomPrice) {
+		setName(name);
+		setLocation(location);
+		setStuffNumber(stuffNumber);
+		setRoomsNumber(roomsNumber);
+		setRoomPrice(roomPrice);
     }
 	
 	public String toString() {
@@ -78,18 +77,18 @@ private int RoomPrice;
 		}
 	
     static void printStaticSum() {
-		System.out.println("There are " + GeneralStuffNumber + " employees in total.");
+		System.out.println("There are " + generalStuffNumber + " employees in total.");
 	}
 	
     public void printSum() {
-		System.out.println("Together with new " + getStuffNumber() + " employees, net of hotels " + getName() + " has got in general " + GeneralStuffNumber + " workers.");
+		System.out.println("Together with new " + getStuffNumber() + " employees, net of hotels " + getName() + " has got in general " + generalStuffNumber + " workers.");
 		}
 		
-    public void resetValues(String Name, String Location, int StuffNumber, int RoomsNumber, int RoomPrice) {
-		setName(Name);
-		setLocation(Location);
-		setStuffNumber(StuffNumber);
-		setRoomsNumber(RoomsNumber);
-		setRoomPrice(RoomPrice);
+    public void resetValues(String name, String location, int stuffNumber, int roomsNumber, int roomPrice) {
+		setName(name);
+		setLocation(location);
+		setStuffNumber(stuffNumber);
+		setRoomsNumber(roomsNumber);
+		setRoomPrice(roomPrice);
 		}
 }
